@@ -1,5 +1,5 @@
-// Offline copy of the OP-14 base: network first (fresh prices), cache when offline.
-const CACHE = 'op14-master-v1';
+// Offline copy of the OP-16 base: network first (fresh prices), cache when offline.
+const CACHE = 'op16-master-v1';
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./', './index.html']))); self.skipWaiting(); });
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', e => {
